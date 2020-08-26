@@ -5,20 +5,63 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>flex</title>
 
     <style>
+        /* flex */
         .container-flex {
             background: #61a0f8;
+            margin: 100px auto;
+            width: 55%;
+            padding: 15px;
+            /* 使用 flex */
             display: flex;
-            max-width: 60%;
-            height: 300px;
-            padding: 20px;
+            flex-wrap: wrap;
+            /* 讓 flex-item 置中 */
+            justify-content: center;
+            /* 垂直置中 */
+            align-items: center;
         }
 
         .flex-item {
-            background: #f08bc3;
-            display: flex;
+            margin-right: 10px;
+            color: #FFF;
+            font-size: 1.2em;
+            max-width: 45%;
+            flex: 0 0 45%;
+        }
+
+        @media( max-width: 991px){
+            .flex-item{
+                max-width: 100%;
+                flex: 0 0 100%;
+            } 
+
+            .container-flex{
+                width: 90%;
+            }
+        }
+
+        /* /flex */
+
+        .flex-item p {
+            font-family: "微軟正黑體";
+            padding: 0 15px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            border: none;
+            padding: 15px 40px;
+            margin: auto;
+            display: block;
+            font-size: 1.1em;
+            font-family: "微軟正黑體";
         }
     </style>
 </head>
@@ -26,21 +69,21 @@
 <body>
 
 
+
+
+
     <div class="container-flex">
 
         <div class="flex-item">
-            1
+            <img src="images/1.jpg">
         </div>
 
         <div class="flex-item">
-            2
+            <p>周子瑜出生於中華民國臺南市東區。家庭成員為爸爸、媽媽及哥哥。</p>
+            <p>子瑜在2011年至2012年間就讀於臺南市立復興國民中學。2012年參與美思表演藝術中心的成果展[11]，同年11月15日前往韓國參加兩次甄選後。</p>
+            <p>正式成為JYP娛樂公司練習生[12][13]，練習生生涯總共大約3年。</p>
+            <button>了解更多</button>
         </div>
-
-        <div class="flex-item">
-            3
-        </div>
-
-
 
     </div>
 
@@ -48,7 +91,5 @@
 
 
 
-
 </body>
-
 </html>
