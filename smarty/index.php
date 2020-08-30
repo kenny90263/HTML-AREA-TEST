@@ -3,9 +3,27 @@
 include "init.inc.php";
 
 
-$var = "this is a demo this is a demo";
+$var = "this is a demo this is8 a demo 我是天才";
 
 $smarty->assign("var", $var);
+
+
+
+function fontstyle($str,$fontsize="3",$fontcolor="pink"){
+    return '<font color="'.$fontcolor.'" size="'.$fontsize.'">'.$str.'</font>';
+}
+
+
+$smarty->registerPlugin("modifier","mystyle","fontstyle");
+
+
+
+
+
+
+
+
+
 $smarty->display("home/index.tpl");
 
 
