@@ -16,6 +16,9 @@ $smarty = new Smarty;
 $smarty->setTemplateDir(ROOT . "/views/");
 $smarty->setCompileDir(ROOT . "/comps/");
 
+// 添加一個插件的目錄
+//$smarty -> setPluginsDir(ROOT."/myplugins/");
+
 // 讓定界符號使用空格
 $smarty->auto_literal = false;
 

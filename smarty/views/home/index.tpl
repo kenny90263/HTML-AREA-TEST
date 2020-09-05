@@ -1,4 +1,7 @@
 
+
+
+
 <{$var}><br>
 <{strtoupper($var)}><br>
 <{ucwords($var)}><br>
