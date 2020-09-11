@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>檔案下載</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: 微軟正黑體;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h2>PDF 另開新視窗瀏覽</h2>
+    <p>所有瀏覽器都兼容</p>
+    <a href="data/tzuyu.pdf" target="_blank">點選我下載</a>
+
+    <br><br><br><br><br>
+
+    <h2>PDF 直接下載</h2>
+    <p>IE不支援</p>
+    <a href="data/tzuyu.pdf" download>點選我下載</a>
+
+
+    <script>
+
+        var a = document.createElement('a');
+
+        if (typeof a.download != "undefined") {
+            a = document.getElementsByTagName("a");
+            length = a.length;
+            for (i = 0; i <= length; i++) {
+                a[i].innerText +=
+                    "(按右鍵另存新檔下載)";
+            }
+
+        } else {
+            a = document.getElementsByTagName("a");
+            length = a.length;
+            for (i = 0; i <= length; i++) {
+                a[i].innerText +=
+                    "(按右鍵另存新檔下載)";
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
