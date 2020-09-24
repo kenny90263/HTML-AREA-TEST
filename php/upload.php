@@ -52,12 +52,16 @@ if ($dl != "image") {
 */
 
 // step 4 將上傳後的文件改名
-
-
-
+$filepath = "./uplaods";
+$randname = date("Y") . date("m") . date("d") . date("H") . date("i") . date("s") . rand(100, 999) . "." . $hz;
 
 // 將臨時位置的文件移動到指定目錄即可
 if (is_uploaded_file($_FILES["file"]["tmp_name"])) {
+    if (move_uploaded_file($_FILES["file"]["tmp_name"], $filepath . $randname)) {
+        echo "上傳成功";
+    } else {
+        echo "上傳失敗";
+    }
 } else {
     echo "不是一個上傳文件";
 }
