@@ -23,7 +23,7 @@ if ($_FILES["file"]["error"] > 0) {
     exit;
 }
 
-$maxsize = 50000;  // 50k
+$maxsize = 1500000;  // 50k
 // step 2 使用 $_FILES["size"] 限制大小 單位字節  2M = 2000000
 if ($_FILES["file"]["size"] > $maxsize) {
     echo "上傳的文件太大，不能超過{$maxsize}字節";
@@ -32,9 +32,24 @@ if ($_FILES["file"]["size"] > $maxsize) {
 
 // step 3 使用 $_FILES["type"] 或是文件的擴展名 限制類型 MIME image/gif image/png
 
-list($dl,$xl) = explode("/",$_FILES["file"]["type"]);
+$allowtype = array("png", "gif", "jpg", "jpeg");
 
+$arr = explode(".", $_FILES["file"]["name"]);
+$hz = $arr[count($arr) - 1];
+//echo $hz;
 
+if (!in_array($hz, $allowtype)) {
+    echo "這是不允許的類型";
+    exit;
+}
+/*
+list($dl, $xl) = explode("/", $_FILES["file"]["type"]);
+
+if ($dl != "image") {
+    echo "請上傳一個圖片，不允許其他類型";
+    exit;
+}
+*/
 
 // step 4 將上傳後的文件改名
 
@@ -42,31 +57,10 @@ list($dl,$xl) = explode("/",$_FILES["file"]["type"]);
 
 
 // 將臨時位置的文件移動到指定目錄即可
-
-/*if ($_FILES["file"]["error"] > 0) {
-    echo "錯誤：" . $_FILES["file"]["error"] . "<br>";
+if (is_uploaded_file($_FILES["file"]["tmp_name"])) {
 } else {
-    echo "上傳文件名: " . $_FILES["file"]["name"] . "<br>";
-    echo "文件類型: " . $_FILES["file"]["type"] . "<br>";
-    echo "文件大小: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
-    echo "文件臨時存儲的位置: " . $_FILES["file"]["tmp_name"] . "<br>";
-
-    // 判断当前目录下的 upload 目录是否存在该文件
-    // 如果没有 upload 目录，你需要创建它，upload 目录权限为 777
-    if (file_exists("upload/" . $_FILES["file"]["name"])) {
-        echo $_FILES["file"]["name"] . " 文件已经存在。 ";
-    } else {
-        // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下
-        print_r(dirname(__FILE__));
-        $fileName = dirname(__FILE__) . '/uploads/' . $_FILES['file']['name'];
-        move_uploaded_file($_FILES["file"]["tmp_name"], $fileName);
-        echo "文件存储在: " . dirname(__FILE__) . '\uploads/' . $_FILES["file"]["name"];
-    }
-}*/
-
-
-
-
+    echo "不是一個上傳文件";
+}
 
 
 
