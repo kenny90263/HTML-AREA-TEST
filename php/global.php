@@ -27,7 +27,26 @@
  */
 ?>
 
-
+<?php
+/*
+echo "<pre>";
+print_r($GLOBALS);
+echo "</pre>";*/
+/*
+session_start();
+$_SESSION['name'] = "kenny";
+print_r($_SESSION);
+*/
+/*
+setcookie(
+    "name",
+    "kenny",
+    time() + 3600,
+    "/"
+);
+print_r($_COOKIE);
+*/
+?>
 <!--<a href="global.php?action=add&id=5&name=admin">click</a>
 
 <form action="" method="post">
