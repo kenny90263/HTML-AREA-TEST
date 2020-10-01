@@ -23,8 +23,32 @@
 
 
 
+$test_arr = array(
+    array(
+        "key1"  => "value1",
+        "key2"  => "value2"
+    ),
+    array(
+        "key3"  => "value3",
+        "key4"  => "value4"
+    ),
+    array(
+        "key5"  => "value5",
+        "key6"  => "value6"
+    )
+);
+
+$add_arr = ["key3"   => "valuead"];
+
+$test_arr[0]["key3"] = "value3";
 
 
+echo "<pre>";
+print_r($test_arr);
+echo "</pre>";
+
+
+/*
 $arr = array("aa","bb","cc");
 $arr2 = ["aa","bb","key"=>"value"]; 
 
@@ -32,9 +56,6 @@ echo "<pre>";
 print_r($arr2 );
 echo "</pre>";
 
-
-
-/*
 $arr[] = 10;
 $arr[] = 10;
 $arr[] = 10;
