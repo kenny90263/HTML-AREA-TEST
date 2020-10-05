@@ -1,3 +1,10 @@
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script>
+    $(document).on('click', '#add_files', function() {
+        var html = '<input type="file" name="file[]"><br>';
+        $('#upload-photos').append(html);
+    });
+</script>
 <?php
 
 /**
@@ -7,13 +14,16 @@
  * 
  */
 ?>
+
 <form action="" method="post" enctype="multipart/form-data">
     <input type="text" name="name"><br><br>
     選擇檔案:<br><input type="hidden" name="MAX_FILE_SIZE" value="100000000"> <!-- 君子的提示 -->
-    <input type="file" name="file[]" /><br>
-    <input type="file" name="file[]" /><br>
-    <input type="file" name="file[]" /><br>
-    <input type="file" name="file[]" /><br><br>
+    <div id="upload-photos">
+        <input type="file" name="file[]"><br>
+
+    </div>
+    <br><br><button type="button" id="add_files">增加上傳</button><br><br>
+    <br>
     <input type="submit" name="submit" value="送出" />
 </form>
 
@@ -32,6 +42,7 @@ print_r($_FILES);
 echo "</pre>";
 
 $num = count($_FILES['file']['name']); // 計算總共有多少個上傳的檔案
+echo $num;
 
 for ($i = 0; $i < $num; $i++) {
 
