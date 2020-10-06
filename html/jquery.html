@@ -5,14 +5,28 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
     <style>
-        form{
+        form {
             position: relative;
         }
-        button{
+
+        button#add_files {
             position: absolute;
             top: 100px;
             left: 200px;
 
+        }
+
+        #remove-input {
+            position: relative;
+            background-color: pink;
+            width: 200px;
+        }
+
+        #remove-button {
+            z-index: 999;
+            position: absolute;
+            right: 0;
+            top: 2px;
         }
     </style>
 </head>
@@ -21,15 +35,32 @@
 
     <script>
         $(document).on('click', '#add_files', function () {
-            var html = '<input type="file" name="file[]"><br>';
+            var html = '<div id="remove-input"><button type="button" id="remove-button">X</button><input type="file" name="file[]"></div>';
             $('#upload-photos').append(html);
         });
+
+        /*$(document).on('click', '#remove-button', function () {
+            $(this).prev().remove();    $("#remove-input").remove();
+        });*/
+
+        $(document).on('click', '#remove-button', function () {
+            $(this).parent().remove();
+        });
+
     </script>
 
 
     <form>
         <div id="upload-photos">
-            <input type="file" name="file[]"><br>
+            <div>
+                <input type="file" name="file[]">
+            </div>
+
+            <div id="remove-input">
+                <button type="button" id="remove-button">X</button>
+                <input type="file" name="file[]">
+            </div>
+
 
 
         </div>
