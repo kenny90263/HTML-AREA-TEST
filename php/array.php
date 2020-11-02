@@ -23,6 +23,33 @@
 
 
 
+
+
+
+
+
+//array_unique();
+/*
+$test = array(
+    'one' => 1, 2, 3, 4, 5,
+    array(
+        'two'   => 22,
+        'three' => 33,
+        'four'  => 44
+    )
+
+);
+$test1 = array(6, 7, 8, 9, 10);
+
+
+$result = array_merge($test, $test1);
+
+echo "<pre>";
+print_r($result);
+echo "</pre>";
+
+
+/*
 $test_arr = array(
     array(
         "key1"  => "value1",

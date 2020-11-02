@@ -1,5 +1,49 @@
 <?php
 
+
+'meta_query' => array(
+    'relation'  => 'OR',
+    array(
+        'key'       => 'news_down_date',
+        'value'     => date('Ymd'),
+        'compare'   => '>='
+    ),
+    array(
+        'key'       => 'news_down_date',
+        'compare'   => 'NOT EXISTS'
+    ),
+    array(  // 置頂
+        'key'       => 'news_top_date',
+        'value'     =>  date('Ymd'),
+        'compare'   => '>='
+    )
+)
+
+
+
+'meta_query' => array(
+    'relation'  => 'AND',
+    array(
+        'key'       => 'news_top_date',
+        'value'     =>  date('Ymd'),
+        'compare'   => '>='
+    ),
+    array(
+        'relation'  => 'OR',
+        array(
+            'key'       => 'news_down_date',
+            'value'     => date('Ymd'),
+            'compare'   => '>='
+        ),
+        array(
+            'key'       => ' news_down_date_bollen',
+            'value'     => 0,
+            'compare'   => '='
+        )
+    )
+)
+
+
 /**
  * 
  *      可續性 可重複性 穩定性 維護性 可測試性
@@ -19,7 +63,12 @@
  * 
  *      加上關鍵字 private 修飾，就不能拿到外部去使用
  *      對象中自己的其他成員可以使用
+ * 
+ * 
+ *      __isset()
+ *      __unset()  
  */
+
 
 class boyfriend
 {
@@ -44,29 +93,36 @@ class boyfriend
         $this->sex = $sex;
     }
 
-    function get_age()
+    /* function get_age()
     {
         echo $this->age;
-    }
+    }*/
     // 函數 (成員方法)
-    private function cook()
+    /*private function cook()
     {
         return $this->name . " cook for dinner";
-    }
+    }*/
 
-    function homework()
+    /* function homework()
     {
         return "do homework";
     }
-
+*/
 
     // 對象回收之前調用
     /*function __destruct()
     {
         echo "goodbye";
     }*/
+
+    function __isset($test)
+    {
+        echo "isset";
+    }
 }
 
-$test = new boyfriend("kenny", "26");
+$test = new boyfriend('kenny',18,'male');
 
-$test->get_age();
+if (isset($test->name)) {
+    echo "good";
+}
