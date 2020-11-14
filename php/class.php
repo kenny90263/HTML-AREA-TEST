@@ -1,49 +1,4 @@
 <?php
-
-
-'meta_query' => array(
-    'relation'  => 'OR',
-    array(
-        'key'       => 'news_down_date',
-        'value'     => date('Ymd'),
-        'compare'   => '>='
-    ),
-    array(
-        'key'       => 'news_down_date',
-        'compare'   => 'NOT EXISTS'
-    ),
-    array(  // 置頂
-        'key'       => 'news_top_date',
-        'value'     =>  date('Ymd'),
-        'compare'   => '>='
-    )
-)
-
-
-
-'meta_query' => array(
-    'relation'  => 'AND',
-    array(
-        'key'       => 'news_top_date',
-        'value'     =>  date('Ymd'),
-        'compare'   => '>='
-    ),
-    array(
-        'relation'  => 'OR',
-        array(
-            'key'       => 'news_down_date',
-            'value'     => date('Ymd'),
-            'compare'   => '>='
-        ),
-        array(
-            'key'       => ' news_down_date_bollen',
-            'value'     => 0,
-            'compare'   => '='
-        )
-    )
-)
-
-
 /**
  * 
  *      可續性 可重複性 穩定性 維護性 可測試性
