@@ -1,15 +1,26 @@
-<?php 
+<form method="post" style="text-align: center; margin-top: 150px;">
+    <textarea style="height: 200px; width: 500px;" name="texts"><?= $_POST['texts']; ?></textarea>
+    <button>送出</button>
+</form>
+<?php
+
+if (!empty($_POST['texts'])) {
+    $post = $_POST['texts'];
+    
+   var_dump($post);
+    
+    
+    
+    //echo $post;
+}
 
 
 
-phpinfo(8);
 
 
 
 
-
-
-
+//phpinfo(8);
 //header("Content-type:application/pdf");
 // It will be called downloaded.pdf
 //header("Content-Disposition:attachment;filename=1090730.pdf");
