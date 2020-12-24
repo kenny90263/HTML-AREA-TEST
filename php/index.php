@@ -1,33 +1,19 @@
-<<<<<<< HEAD
-<form method="post" style="text-align: center; margin-top: 150px;">
-    <textarea style="height: 200px; width: 500px;" name="texts"><?= $_POST['texts']; ?></textarea>
-    <button>送出</button>
-</form>
 <?php
 
-if (!empty($_POST['texts'])) {
-    $post = $_POST['texts'];
-    
-   var_dump($post);
-    
-    
-    
-    //echo $post;
-}
-=======
-<?php
 
->>>>>>> 22d061a3373a66faf7dfb18bfe66480beb001405
+// compare which date is bigger
+$TodayDate = date("Ymd");
+$Deadline = "2020-12-20";
 
-
-
+if (strtotime($TodayDate) > strtotime($Deadline))
+    echo "還沒有過期";
+else
+    echo "過期了";
 
 
 // set the system timezone
-date_default_timezone_set("Asia/Taipei");
-echo date('Y-m-d');
-
-
+//date_default_timezone_set("Asia/Taipei");
+//echo date('Y-m-d');
 //phpinfo(8);
 //header("Content-type:application/pdf");
 // It will be called downloaded.pdf
