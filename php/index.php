@@ -1,15 +1,35 @@
 <?php
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // compare which date is bigger
-$TodayDate = date("Ymd");
+/*$TodayDate = date("Ymd");
 $Deadline = "2020-12-20";
 
 if (strtotime($TodayDate) > strtotime($Deadline))
     echo "還沒有過期";
 else
     echo "過期了";
-
+*/
 
 // set the system timezone
 //date_default_timezone_set("Asia/Taipei");
