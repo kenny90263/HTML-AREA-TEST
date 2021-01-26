@@ -1,7 +1,52 @@
 <?php
 
 
-$str = array(
+/*
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+You can return the answer in any order.
+*/
+
+// Brute Force
+class Solution
+{
+
+	/**
+	 * @param Integer[] $nums
+	 * @param Integer $target
+	 * @return Integer[]
+	 */
+	function twoSum($nums, $target)
+	{
+
+		foreach ($nums as $num => $value) {
+
+			
+
+
+		}
+
+
+	}
+}
+
+// for (int i = 0; i < nums.length; i++) {
+// 	for (int j = i + 1; j < nums.length; j++) {
+// 		if (nums[j] == target - nums[i]) {
+// 			return new int[] { i, j };
+// 		}
+// 	}
+
+$nums = array(1, 2, 5, 8, 9, 55);
+$target = 11;
+$solution = new Solution;
+
+$solution->twoSum($nums, $target);
+
+
+
+/*$str = array(
 	'<option value="3A01-A ">3A01-A </option>',
 	'<option value="3A01-B ">3A01-B </option>',
 	'<option value="3A02-A ">3A02-A </option>',
@@ -40,20 +85,7 @@ $str = array(
 
 foreach($str as $strs){
     echo strip_tags($strs)."<br>";
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+}*/
 // compare which date is bigger
 /*$TodayDate = date("Ymd");
 $Deadline = "2020-12-20";
