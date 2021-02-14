@@ -1,6 +1,46 @@
 <?php
 
 
+echo "<pre>";
+print_r(preg_match("/^[1-9][0-9]*$/", 55));
+echo "</pre>";
+
+
+// function my_sort()
+// {
+// }
+
+// $test = array(
+// 	1, 2, 3, 4, 5, 6, 7
+// );
+
+// $arr1 = array(5, 6, 1,2,3);
+
+// foreach ($test as $arr => $value) {
+
+// 	if (in_array($value, $arr1)) {
+// 		unset($test[$arr]);
+// 	}
+// }
+
+// foreach ($arr1 as $i) {
+// 	array_unshift($test, $i);
+// }
+
+
+// // usort($test, "my_sort");
+
+// echo "<pre>";
+// print_r($test);
+// echo "</pre>";
+
+
+// $test = 123;
+// $test .= 456;
+
+// echo "<pre>";
+// print_r($test);
+// echo "</pre>";
 /*
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
@@ -21,13 +61,7 @@ class Solution
 	{
 
 		foreach ($nums as $num => $value) {
-
-			
-
-
 		}
-
-
 	}
 }
 
