@@ -1,9 +1,77 @@
 <?php
 
 
-echo "<pre>";
-print_r(preg_match("/^[1-9][0-9]*$/", 55));
-echo "</pre>";
+
+// class myclass
+// {
+
+// 	public $pro1 = "i`m a class property.";
+
+
+// 	public function set_property($newval){
+// 		$this ->pro1 = $newval;
+// 	}
+
+// 	public function get_property(){
+// 		return $this -> pro1."<br>";
+// 	}
+// }
+
+// $my_class = new myclass;
+
+// var_dump($my_class ->get_property());
+
+// var_dump($my_class -> set_property('fuck you'));
+// echo $my_class -> get_property();
+
+
+
+
+
+
+
+
+
+
+
+
+// $test = array(
+// 	0, 1, 2, 3, 4, 5, 6, 7, 8
+// );
+
+// $testtest = array(
+// 	9, 10, 11, 12
+// );
+
+// $arrayconbin[] = $test;
+// $arrayconbin[] = $testtest;
+// echo "<pre>";
+// print_r($arrayconbin);
+// echo "</pre>";
+
+// $count = 0;
+// foreach($test as $test1){
+
+// 	if(in_array($count,array(0,1,2,8))){
+// 		$count++;
+// 		continue;
+// 	}
+
+
+
+
+// 	echo $test1;
+
+
+
+// 	$count++;
+// }
+
+
+
+// echo "<pre>";
+// print_r(preg_match("/^[1-9][0-9]*$/", 55));
+// echo "</pre>";
 
 
 // function my_sort()
@@ -49,21 +117,21 @@ You can return the answer in any order.
 */
 
 // Brute Force
-class Solution
-{
+// class Solution
+// {
 
-	/**
-	 * @param Integer[] $nums
-	 * @param Integer $target
-	 * @return Integer[]
-	 */
-	function twoSum($nums, $target)
-	{
+// 	/**
+// 	 * @param Integer[] $nums
+// 	 * @param Integer $target
+// 	 * @return Integer[]
+// 	 */
+// 	function twoSum($nums, $target)
+// 	{
 
-		foreach ($nums as $num => $value) {
-		}
-	}
-}
+// 		foreach ($nums as $num => $value) {
+// 		}
+// 	}
+// }
 
 // for (int i = 0; i < nums.length; i++) {
 // 	for (int j = i + 1; j < nums.length; j++) {
@@ -72,11 +140,11 @@ class Solution
 // 		}
 // 	}
 
-$nums = array(1, 2, 5, 8, 9, 55);
-$target = 11;
-$solution = new Solution;
+// $nums = array(1, 2, 5, 8, 9, 55);
+// $target = 11;
+// $solution = new Solution;
 
-$solution->twoSum($nums, $target);
+// $solution->twoSum($nums, $target);
 
 
 
