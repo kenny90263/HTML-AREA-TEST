@@ -1,6 +1,22 @@
 <?php
 
 
+// (預約)探視日期
+// 病人姓名
+// 訪客姓名
+// 生日
+// 身份証字號
+// 預的病房
+// 時段
+// 病床號
+
+
+
+
+
+
+
+
 
 // class myclass
 // {
@@ -23,17 +39,6 @@
 
 // var_dump($my_class -> set_property('fuck you'));
 // echo $my_class -> get_property();
-
-
-
-
-
-
-
-
-
-
-
 
 // $test = array(
 // 	0, 1, 2, 3, 4, 5, 6, 7, 8
