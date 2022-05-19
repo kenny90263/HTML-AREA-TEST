@@ -1,4 +1,46 @@
-<!DOCTYPE html>
+<?php
+
+$str = "王康齡";
+
+// echo urldecode($str);
+
+$test =  base64_encode($str);
+
+
+if ($test == 'qJrD5rxmauILPMSOpAZekA==') {
+    echo "比對成功";
+} else {
+    echo "失敗";
+}
+
+
+// // + final 不能被重寫
+
+// class Father
+// {
+//     public function jump()
+//     {
+//         echo "I can jump";
+//     }
+// }
+
+
+// class Son extends Father
+// {
+//     public function jump()
+//     {
+//         parent::jump();
+//         echo "I can fucking jump";
+//     }
+// }
+
+
+// $test = new son;
+
+// $test->jump();
+
+?>
+<!-- <!DOCTYPE html>
 <html style="margin-top: 0 !important" lang="en-US">
 
 <head>
@@ -52,7 +94,7 @@
 
 </body>
 
-</html>
+</html> -->
 
 <?php
 
